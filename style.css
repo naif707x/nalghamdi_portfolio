@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 10rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+h2 {
+  color: #b74b4b;
+  font-size: 2rem;
+}
+
+h2,
+h3,
+p {
+  transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+h2:hover,
+h3:hover,
+p:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+p:hover {
+  transition: color 0.2 ease-in-out;
+  color: #b74b4b;
+}
+
+#contact p:hover {
+  color: #fff;
+}
+
+.footer {
+  color: #d37272;
+  font-size: 0.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #b74b4b;
+  transform: scale(1.1);
+}
+
+section {
+  padding: 200px 100px;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  z-index: 1000;
+  background-color: black;
+  backdrop-filter: blur(20px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+  margin: 15px;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.fade-in-paragraph {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-paragraph.visible {
+  opacity: 1;
+}
+
+.logo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: #b74b4b;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  margin-left: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.5s ease;
+  position: relative;
+  text-shadow: 0.05em 0 0 rgb(255, 251, 0), -0.025em -0.05em 0 grey,
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 500ms infinite;
+}
+
+.flag-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding-bottom: 20rem;
+  flex-wrap: wrap;
+  animation: fade-in 3s;
+}
+
+.flag-body h1 {
+  font-size: 4rem;
+}
+
+.hacked-glitch {
+  transition: color 0.3s ease, transform 0.5s ease;
+  position: relative;
+  text-shadow: 0.05em 0 0 rgb(255, 251, 0), -0.025em -0.05em 0 grey,
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 500ms infinite;
+}
+
+.logo span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  opacity: 0.8;
+}
+
+.logo span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  opacity: 0.8;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.social-icons a {
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: white;
+  box-shadow: 0 0 25px white;
+}
+
+.menu-button {
+  display: none;
+}
+
+span {
+  color: #b74b4b;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  transition: transform 0.5s ease;
+}
+
+.home-content h1:hover {
+  transform: scale(1.1);
+}
+
+.home-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.text-content {
+  width: 50%;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.home-img img {
+  position: relative;
+  width: 62vh;
+}
+
+.border {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.border:hover {
+  color: #000 !important;
+  transform: scale(1.03);
+  border: #b74b4b !important;
+  background-color: #b74b4b;
+  box-shadow: 0 0 25px #b74b4b;
+}
+
+.border a:hover {
+  color: #000;
+}
+
+#projects a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+#experience ul,
+#Certifications ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#experience ul li,
+#Certifications ul li {
+  color: #fff;
+  margin-bottom: 10px;
+  transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#experience ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#experience ul li:hover,
+#Certifications ul li:hover {
+  transform: scale(1.1);
+  color: #b74b4b;
+}
+
+#experience ul li a:hover,
+#Certifications ul li a:hover {
+  color: #b74b4b;
+}
+
+#experience ul li::marker,
+#Certifications ul li::marker {
+  color: #b74b4b;
+  font-size: 1.2rem;
+}
+
+.typing-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: "Cybersecurity Expert";
+  color: #b74b4b;
+  animation: words 20s infinite;
+}
+
+.typing-text span::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid black;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05rem 0 0 black, -0.05rem -0.025rem grey,
+      -0.025rem 0.05rem blue;
+  }
+  14% {
+    text-shadow: 0.05rem 0 0 black, -0.05rem -0.025rem grey,
+      -0.025rem 0.05rem blue;
+  }
+  15% {
+    text-shadow: -0.05rem -0.025rem black, 0.025rem 0.025rem grey,
+      -0.05rem -0.05rem blue;
+  }
+  49% {
+    text-shadow: -0.05rem -0.025rem black, 0.025rem 0.025rem grey,
+      -0.05rem -0.05rem blue;
+  }
+  50% {
+    text-shadow: 0.025rem 0.05rem black, 0.05rem 0 grey, 0 -0.05rem blue;
+  }
+  99% {
+    text-shadow: 0.025rem 0.05rem black, 0.05rem 0 grey, 0 -0.05rem blue;
+  }
+  100% {
+    text-shadow: -0.025em 0 black, -0.025rem -0.025rem grey,
+      -0.025rem -0.05rem blue;
+  }
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #b74b4b;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Cybersecurity Expert";
+  }
+  21%,
+  40% {
+    content: "Hacker";
+  }
+  41%,
+  60% {
+    content: "Penetration Tester";
+  }
+  61%,
+  80% {
+    content: "Red Teamer";
+  }
+  81%,
+  100% {
+    content: "Hacking Enthusiast";
+  }
+}
+
+@media (max-width: 900px) {
+  .hideInMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block !important;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    padding: 20px;
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 150px 20px;
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content h3 {
+    font-size: 1rem;
+  }
+
+  .text-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .home-img img {
+    width: 80vw;
+    margin-top: 1rem;
+  }
+
+  .footer {
+    font-size: 0.6rem;
+  }
+
+  .border {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .flag-body .logo {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-button {
+    display: block;
+  }
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar li {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+}
